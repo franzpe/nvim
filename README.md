@@ -7,7 +7,7 @@
 ## Todo
 
 - toggleTerm
-  - [x] toggle specific terminal instance <C-{num}><C-`>
+  - [x] toggle specific terminal instance <{num}-C-`>
   - [ ] be able to open float terminal & horizontal terminal
     - [x] float terminal
     - [ ] horizontal terminal
