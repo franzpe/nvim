@@ -12,6 +12,11 @@ end
 
 -- configure telescope
 telescope.setup({
+  pickers = {
+    find_files = {
+      hidden = true,
+    },
+  },
   -- configure custom mappings
   defaults = {
     mappings = {
