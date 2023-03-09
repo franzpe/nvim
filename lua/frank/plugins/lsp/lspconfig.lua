@@ -58,6 +58,16 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
+-- diagnostic customization to be less distracting
+vim.diagnostic.config({
+  virtual_text = false,
+  severity_sort = true,
+  float = {
+    border = "rounded",
+    source = "always",
+  },
+})
+
 -- configure html server
 lspconfig["html"].setup({
   capabilities = capabilities,
