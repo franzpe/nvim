@@ -11,5 +11,9 @@
 - toggleTerm
   - [x] toggle specific terminal instance <{num}-C-`>
   - [ ] be able to open float terminal & horizontal terminal
+  - [ ] Toggle term clearing session data whenever it wants
     - [x] float terminal
     - [ ] horizontal terminal
+  - [ ] Put better theme, so code is better recognizable
+  - [ ] tmux
+  - [ ] When intellisense available, have it on first option always, as vs code does
