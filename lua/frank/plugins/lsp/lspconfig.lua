@@ -79,11 +79,20 @@ typescript.setup({
   server = {
     capabilities = capabilities,
     on_attach = on_attach,
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+    cmd = { "typescript-language-server", "--stdio" },
   },
 })
 
 -- configure css server
 lspconfig["cssls"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  filetypes = { "css", "scss", "less" },
+})
+
+-- configure css server
+lspconfig["cssmodules_ls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
