@@ -19,13 +19,13 @@ end
 -- load vs-code like snippets from plugins (e.g. friendly-snippets)
 require("luasnip/loaders/from_vscode").lazy_load()
 
-vim.opt.completeopt = "menu,menuone,noselect"
-
 cmp.setup({
-  snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+  completion = {
+    completeOpt = "menu,preview,menuone,noselect",
   },
   mapping = cmp.mapping.preset.insert({
     ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
@@ -37,12 +37,18 @@ cmp.setup({
     ["<Tab>"] = cmp.mapping.confirm({ select = true }),
     ["<CR>"] = cmp.mapping.confirm({ select = false }),
   }),
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
   -- sources for autocompletion
   sources = cmp.config.sources({
     { name = "nvim_lsp" }, -- lsp
     { name = "luasnip" }, -- snippets
-    { name = "buffer" }, -- text within current buffer
     { name = "path" }, -- file system paths
+  }, {
+    { name = "buffer" }, -- text within current buffer
   }),
   -- configure lspkind for vs-code like icons
   formatting = {
