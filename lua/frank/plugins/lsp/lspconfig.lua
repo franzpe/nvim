@@ -16,6 +16,19 @@ if not typescript_setup then
   return
 end
 
+-- import typescript plugin safely
+local signature_status, signature = pcall(require, "lsp_signature")
+if not signature_status then
+  return
+end
+
+-- setup lsp signature
+signature.setup({
+  bind = true, -- This is mandatory, otherwise border config won't get registered.
+  hint_enable = false,
+  toggle_key = "<C-k>",
+})
+
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
@@ -25,11 +38,10 @@ local on_attach = function(client, bufnr)
 
   -- set keybinds
   keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
-  keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
+  keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declarion()<CR>", opts) -- got to declaration
   keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
   keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
   keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts) -- see signature help for function
-  keymap.set("i", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts) -- see signature help in write mode
   keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
   keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
   keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line

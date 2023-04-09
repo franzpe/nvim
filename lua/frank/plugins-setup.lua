@@ -76,6 +76,7 @@ return packer.startup(function(use)
 
   -- configuring lsp servers
   use("neovim/nvim-lspconfig") -- easily configure language servers
+  use("ray-x/lsp_signature.nvim")
   use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
   use({
     "glepnir/lspsaga.nvim",

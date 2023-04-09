@@ -27,6 +27,7 @@ vim.g.nightflyTransparent = true
 vim.g.nightflyCursorColor = true
 vim.g.nightflyItalics = true
 opt.cursorline = false
+vim.g.nightflyNormalFloat = false
 
 -- turn on termguicolors for nightfly colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
