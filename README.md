@@ -10,6 +10,7 @@
 
 - toggleTerm
   - [x] toggle specific terminal instance <{num}-C-`>
+  - [x] jsx comment not working properly
   - [ ] be able to open float terminal & horizontal terminal
   - [ ] Toggle term clearing session data whenever it wants
     - [x] float terminal
