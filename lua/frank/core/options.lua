@@ -24,6 +24,9 @@ opt.cursorline = true -- highlight the current cursor line
 
 -- theme options
 vim.g.nightflyTransparent = true
+vim.g.nightflyCursorColor = true
+vim.g.nightflyItalics = true
+opt.cursorline = false
 
 -- turn on termguicolors for nightfly colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
@@ -42,4 +45,3 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
-
