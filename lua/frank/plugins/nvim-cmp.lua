@@ -19,12 +19,25 @@ end
 -- load vs-code like snippets from plugins (e.g. friendly-snippets)
 require("luasnip/loaders/from_vscode").lazy_load()
 
-vim.opt.completeopt = { "menuone", "noselect" }
+local compare = require("cmp.config.compare")
 
 cmp.setup({
+  sorting = {
+    priority_weight = 1.0,
+    comparators = {
+      compare.locality,
+      compare.recently_used,
+      compare.score, -- based on :  score = score + ((#sources - (source_index - 1)) * sorting.priority_weight)
+      compare.offset,
+      compare.order,
+    },
+  },
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
+  },
+  completion = {
+    completeopt = "menu, menuone",
   },
   mapping = cmp.mapping.preset.insert({
     ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
@@ -43,11 +56,11 @@ cmp.setup({
   },
   -- sources for autocompletion
   sources = cmp.config.sources({
-    { name = "nvim_lsp" }, -- lsp
-    { name = "luasnip" }, -- snippets
-    { name = "path" }, -- file system paths
+    { name = "nvim_lsp", priority = 2 }, -- lsp
+    { name = "luasnip", priority = 1 }, -- snippets
+    { name = "path", priority = 1 }, -- file system paths
   }, {
-    { name = "buffer" }, -- text within current buffer
+    { name = "buffer", priority = 1 }, -- text within current buffer
   }),
   -- configure lspkind for vs-code like icons
   formatting = {
@@ -55,5 +68,8 @@ cmp.setup({
       maxwidth = 50,
       ellipsis_char = "...",
     }),
+  },
+  experimental = {
+    ghost_text = true,
   },
 })
