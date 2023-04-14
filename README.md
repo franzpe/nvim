@@ -17,5 +17,6 @@
     - [ ] horizontal terminal
   - [ ] Put better theme, so code is better recognizable
   - [ ] tmux
-  - [ ] When intellisense available, have it on first option always, as vs code does
+  - [x] When intellisense available, have it on first option always, as vs code does
   - [x] Automatically shows signature when typing function params (lsp_signature)
+  - [x] have snippets with low priority in cmp
