@@ -3,6 +3,7 @@ local opt = vim.opt -- for conciseness
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+opt.numberwidth = 4 -- set number column width {default 4}
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
@@ -19,6 +20,8 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 
 -- cursor line
 opt.cursorline = true -- highlight the current cursor line
+vim.opt.scrolloff = 8 -- determines the number of context lines you would like to see above and below the cursor. If high coursor will be in the middle when possible
+vim.opt.sidescrolloff = 8
 
 -- appearancea
 
@@ -46,3 +49,7 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.iskeyword:append("-") -- consider string-string as whole word
+
+-- misc
+vim.opt.swapfile = false -- creates a swapfile
+vim.opt.updatetime = 300 -- faster completion (4000ms default)
