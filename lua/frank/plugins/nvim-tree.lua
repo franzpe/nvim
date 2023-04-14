@@ -16,6 +16,10 @@ vim.cmd([[ highlight NvimTreeNormal guibg=none ]])
 
 -- configure nvim-tree
 nvimtree.setup({
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+  },
   -- change folder arrow icons
   renderer = {
     icons = {
@@ -37,9 +41,9 @@ nvimtree.setup({
       },
     },
   },
-  -- 	git = {
-  -- 		ignore = false,
-  -- 	},
+  view = {
+    width = 40,
+  },
 })
 
 -- open nvim-tree on setup
