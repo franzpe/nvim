@@ -23,7 +23,7 @@ opt.cursorline = true -- highlight the current cursor line
 vim.opt.scrolloff = 8 -- determines the number of context lines you would like to see above and below the cursor. If high coursor will be in the middle when possible
 vim.opt.sidescrolloff = 8
 
--- appearancea
+-- appearancea --
 
 -- theme options
 vim.g.nightflyTransparent = true
