@@ -1,4 +1,4 @@
-# My Neovim configuration
+# My Neovim configuration 
 
 ## Documentation links for plugins
 
