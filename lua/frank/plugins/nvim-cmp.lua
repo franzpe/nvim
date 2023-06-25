@@ -26,8 +26,8 @@ cmp.setup({
     priority_weight = 1.0,
     comparators = {
       compare.locality,
-      compare.recently_used,
       compare.score, -- based on :  score = score + ((#sources - (source_index - 1)) * sorting.priority_weight)
+      compare.recently_used,
       compare.offset,
       compare.order,
     },
@@ -56,7 +56,7 @@ cmp.setup({
   },
   -- sources for autocompletion
   sources = cmp.config.sources({
-    { name = "nvim_lsp", priority = 2 }, -- lsp
+    { name = "nvim_lsp", priority = 4 }, -- lsp
     { name = "luasnip", priority = 1 }, -- snippets
     { name = "path", priority = 1 }, -- file system paths
   }, {
