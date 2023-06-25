@@ -15,6 +15,11 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
   -- setup formatters & linters
   sources = {
+    -- golang setup
+    null_ls.builtins.formatting.gofmt,
+    null_ls.builtins.formatting.goimports,
+    --[[ null_ls.builtins.formatting.golines, ]]
+
     --  to disable file types use
     --  "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
     formatting.prettier, -- js/ts formatter

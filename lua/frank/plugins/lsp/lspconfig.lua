@@ -130,6 +130,22 @@ lspconfig["emmet_ls"].setup({
   filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 })
 
+lspconfig["gopls"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  cmd = { "gopls" },
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      },
+    },
+  },
+})
+
 -- configure lua server (with special settings)
 lspconfig["lua_ls"].setup({
   capabilities = capabilities,
