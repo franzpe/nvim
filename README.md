@@ -1,4 +1,4 @@
-# My Neovim configuration 
+# My Neovim configuration
 
 ## Documentation links for plugins
 
@@ -20,3 +20,5 @@
   - [x] When intellisense available, have it on first option always, as vs code does
   - [x] Automatically shows signature when typing function params (lsp_signature)
   - [x] have snippets with low priority in cmp
+  - [ ] GO - Fix golines, has problems with env path variable
+  - [ ] go - debugging [link](https://www.youtube.com/watch?v=i04sSQjd-qo&ab_channel=DreamsofCode)
