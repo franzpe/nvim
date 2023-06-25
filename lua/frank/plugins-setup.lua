@@ -112,6 +112,9 @@ return packer.startup(function(use)
   -- toggle term
   use("akinsho/toggleterm.nvim")
 
+  -- golang delp integration
+  use("mfussenegger/nvim-dap")
+
   if packer_bootstrap then
     require("packer").sync()
   end
