@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/frantisek/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["gopher.nvim"] = {
+    loaded = true,
+    path = "/Users/frantisek/.local/share/nvim/site/pack/packer/start/gopher.nvim",
+    url = "https://github.com/olexsmir/gopher.nvim"
+  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/Users/frantisek/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",

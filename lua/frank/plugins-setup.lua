@@ -116,7 +116,16 @@ return packer.startup(function(use)
   use("mfussenegger/nvim-dap")
   use("leoluz/nvim-dap-go")
 
+  --golang extras
+  use({
+    "olexsmir/gopher.nvim",
+    run = function(_, opts)
+      require("gopher").setup(opts)
+    end,
+  })
+
   if packer_bootstrap then
     require("packer").sync()
+    vim.cmd([[silent! GoInstallDeps]])
   end
 end)

@@ -73,3 +73,7 @@ end)
 vim.keymap.set("n", "<leader>dgl", function() -- debug last go test
   require("dap-go").debug_last()
 end)
+
+-- golang extras
+vim.keymap.set("n", "<leader>gsj", "<cmd>GoTagAdd json<cr>") -- add json struct tag
+vim.keymap.set("n", "<leader>gsy", "<cmd>GoTagAdd yaml<cr>") -- add yaml struct tag
