@@ -5,6 +5,7 @@
 [Lazygit keybindings](https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_en.md)
 [Vim-surround (tpope)](https://github.com/tpope/vim-surround)
 [vim-ReplaceWithRegister (inkarkat)](https://github.com/inkarkat/vim-ReplaceWithRegister)
+[Gosetup](https://www.youtube.com/watch?v=i04sSQjd-qo&ab_channel=DreamsofCode)
 
 ## Todo
 
@@ -21,4 +22,4 @@
   - [x] Automatically shows signature when typing function params (lsp_signature)
   - [x] have snippets with low priority in cmp
   - [ ] GO - Fix golines, has problems with env path variable
-  - [ ] go - debugging [link](https://www.youtube.com/watch?v=i04sSQjd-qo&ab_channel=DreamsofCode)
+  - [x] go - debugging [link](https://www.youtube.com/watch?v=i04sSQjd-qo&ab_channel=DreamsofCode)

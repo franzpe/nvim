@@ -114,6 +114,7 @@ return packer.startup(function(use)
 
   -- golang delp integration
   use("mfussenegger/nvim-dap")
+  use("leoluz/nvim-dap-go")
 
   if packer_bootstrap then
     require("packer").sync()

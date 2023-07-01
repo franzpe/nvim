@@ -59,3 +59,17 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 
 -- lazy git with floating toggle terminal
 vim.keymap.set("n", "<C-g>", ":lua _LAZYGIT_TOGGLE()<CR>")
+
+-- golang debugger
+vim.keymap.set("n", "<leader>db", "<cmd>DapToggleBreakpoint<cr>") -- toggle break point
+vim.keymap.set("n", "<leader>dus", function() -- open sidebar ui
+  local widgets = require("dap.ui.widgets")
+  local sidebar = widgets.sidebar(widgets.scopes)
+  sidebar.open()
+end)
+vim.keymap.set("n", "<leader>dgt", function() -- debug go test
+  require("dap-go").debug_test()
+end)
+vim.keymap.set("n", "<leader>dgl", function() -- debug last go test
+  require("dap-go").debug_last()
+end)
