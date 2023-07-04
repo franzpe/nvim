@@ -23,3 +23,4 @@
   - [x] have snippets with low priority in cmp
   - [ ] GO - Fix golines, has problems with env path variable
   - [x] go - debugging [link](https://www.youtube.com/watch?v=i04sSQjd-qo&ab_channel=DreamsofCode)
+  - [ ] eslint enhance
