@@ -165,3 +165,16 @@ lspconfig["lua_ls"].setup({
     },
   },
 })
+
+lspconfig["stylelint_lsp"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = {
+    stylelintplus = {
+      enable = true,
+      autoFixOnSave = true,
+      autoFixOnFormat = true,
+      validateOnType = true,
+    },
+  },
+})
