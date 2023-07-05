@@ -10,6 +10,10 @@ local keymap = vim.keymap -- for conciseness
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
 
+-- go left & right in insert mode
+keymap.set("i", "<C-h>", "<left>")
+keymap.set("i", "<C-l>", "<right>")
+
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
