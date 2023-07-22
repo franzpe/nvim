@@ -39,6 +39,8 @@ return packer.startup(function(use)
 
   use("szw/vim-maximizer") -- maximizes and restores current window
 
+  use("mg979/vim-visual-multi") --multi cursor
+
   -- essential plugins
   use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
   use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
