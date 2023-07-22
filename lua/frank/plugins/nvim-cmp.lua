@@ -53,6 +53,13 @@ cmp.setup({
     end, { "i", "s" }),
     ["<C-e>"] = cmp.mapping.abort(), -- close completion window
     ["<CR>"] = cmp.mapping.confirm({ select = false }),
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
+      if luasnip_status and luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end),
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.confirm({ select = true })
