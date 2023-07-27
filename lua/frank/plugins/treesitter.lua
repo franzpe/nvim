@@ -13,7 +13,7 @@ treesitter.setup({
   -- enable indentation
   indent = { enable = true },
   -- enable autotagging (w/ nvim-ts-autotag plugin)
-  autotag = { enable = true },
+  autotag = { enable = true, enable_close_on_slash = false },
   -- ensure these language parsers are installed
   ensure_installed = {
     "json",
